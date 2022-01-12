@@ -20,7 +20,7 @@ public class JpaStudy {
 		
 		try {
 		    tx.begin(); //트랜잭션 시작
-		    jpaQueryTiming(em);
+		    JPA쿼리는언제_실행될까(em);
 		tx.commit();//트랜잭션 커밋
 		} catch (Exception e) {
 		    e.printStackTrace();
@@ -32,10 +32,7 @@ public class JpaStudy {
 		emf.close(); //엔티티 매니저 팩토리 종료	
 	}
 	 
-	 /**
-	 * jap에서 쿼리는 언제 실행 될까?
-	 */
-	private static void jpaQueryTiming(EntityManager em) {
+	private static void JPA쿼리는언제_실행될까(EntityManager em) {
 		Team team1 = new Team("team1", "전자상거래");
 		em.persist(team1);
 		 
